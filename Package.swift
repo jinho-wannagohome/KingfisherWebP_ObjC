@@ -11,15 +11,13 @@ let package = Package(
             targets: ["KingfisherWebP_ObjC"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/SDWebImage/libwebp-Xcode", from: "1.1.0")
+        .package(url: "https://github.com/SDWebImage/libwebp-Xcode", from: "1.2.3")
     ],
     targets: [
         .target(
             name: "KingfisherWebP_ObjC",
-            dependencies: [
-                .product(name: "libwebp", package: "libwebp-Xcode")
-            ],
+            dependencies: ["libwebp"],
             path: "Sources",
-        publicHeadersPath: "include/KingfisherWebP_ObjC"),
+            publicHeadersPath: "include/KingfisherWebP_ObjC"),
     ]
 )
